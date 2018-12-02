@@ -1,0 +1,33 @@
+import turtle
+t = turtle.Turtle()
+t.speed(0)            #daha hizli cizmesi icin
+
+t.up()
+t.goto(-300,150)
+t.down()
+def koch_ciz(t,x):
+    if x <= 3:
+        t.fd(x)
+    else:
+        koch_ciz(t,x/3)
+        t.lt(60)
+        koch_ciz(t,x/3)
+        t.rt(120)
+        koch_ciz(t,x/3)
+        t.lt(60)
+        koch_ciz(t,x/3)
+
+koch_ciz(t,600) #1.sekil
+t.up()
+t.goto(-300,50) #2. sekil
+t.down()
+koch_ciz(t,300) #3.sekil
+t.up()
+t.fd(100)
+t.down()
+koch_ciz(t,100) #4. sekil
+t.up()
+t.fd(100)
+t.down()
+koch_ciz(t,3)   #x <=3 saglandigi icin kendi uzunlugunda bir dogru cizdi ancak kucuk oldugundan gozukmuyor.
+turtle.mainloop()
