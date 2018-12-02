@@ -1,0 +1,40 @@
+import math
+
+def kare():
+    x = int(input("Karenizin kenarinin uzunlugunu giriniz : "))
+    print ("Karenizin alani = ", (x**(2)))
+    print ("Karenizin cevresi = ", (x*4))
+
+def dikdortgen():
+    x = int(input("Dikdortgeninizin uzun kenarini giriniz : "))
+    y = int(input("Dikdortgeninizin kısa kenarini giriniz : "))
+    print ("Dikdortgeninizin alani = ", (x*y))
+    print ("Dikdortgeninizin cevresi = ", ((x*2)+(y*2)))
+
+def cesitkenar():
+    x = int(input("Cesitkenar Ucgeninizin 1. kenarini giriniz : "))
+    y = int(input("Cesitkenar Ucgeninizin 2. kenarini giriniz : "))
+    z = int(input("Cesitkenar Ucgeninizin 3. kenarini giriniz : "))
+    s = ((x+y+z)/2)
+    print ("Cesitkenar Ucgeninizin alani : " , (s*(s-x)*(s-y)*(s-z))**(0.5))
+    print ("Cesitkenar Ucgeninizin cevresi : " ,(x+y+z))
+
+def yamuk():
+    x = int(input("Alt taban degerini girin : " ))
+    y = int(input("ust taban degerini girin : " ))
+    z = int(input("sag kenar degerini girin : " ))
+    t = int(input("sol kenar degerini girin : " ))
+    h = int(input("yukseklik degerini girin : " ))
+    print ("Yamugun alani : ",(((x+y)/2)*h))
+    print ("Yamugun cevresi : " , (x+y+z+t))
+
+def daire():
+    r = int(input("Dairenizin yari capini giriniz : "))
+    print("Dairenizin alani : " , math.pi*(r**(2)))
+    print("Dairenizin cevresi : " , math.pi*2*r)
+    
+kare()
+dikdortgen()
+cesitkenar()
+yamuk()
+daire()
