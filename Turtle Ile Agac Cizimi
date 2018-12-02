@@ -1,0 +1,19 @@
+import turtle
+s = turtle.Turtle()
+s.left(90)
+s.speed(0)
+
+def ciz(l):
+    if(l<10):
+        return
+    else:
+        s.fd(l)
+        s.lt(30)
+        ciz(6*l/8)
+        s.rt(60)
+        ciz(6*l/8)
+        s.lt(30)
+        s.backward(l)
+
+ciz(60)             #farkli degerler verilerek daha buyuk veya kucuk agaclar cizdirilebilir.
+turtle.mainloop()
