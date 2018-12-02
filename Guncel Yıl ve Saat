@@ -1,0 +1,4 @@
+import time
+
+print ("Icinde bulundugumuz yil : ",time.strftime('%Y'))
+print ("Su andaki Türkiye saati : : ",time.strftime('%X'))
