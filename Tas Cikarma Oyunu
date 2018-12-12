@@ -1,0 +1,44 @@
+def tasCikarmaOyna(toplamTasAdedi,maxTas):
+    while True:
+        while True:
+            x = int(input("1. Oyuncu : Kac tas almak istiyorsunuz? ")) #birinci oyuncunun kac tas alacagini sorduk
+            if type(x) != int:  #girilen sayinin tam sayi olup olmadigini kontrol ettik
+                print("Lutfen gecerli bir tam sayi giriniz")
+                break
+            elif x > maxTas: #alınmak istenen tas sayisinin tek seferde alınabilecek sayidan az olup olmadigini kontrol ettik
+                print("Lutfen 1-",maxTas,"arası gecerli bir sayi giriniz")
+                break
+            elif toplamTasAdedi < x: #alinmak istenen tas sayisinin yerdeki tas sayisindan az olup olmadigini kontrol ettik
+                print("Lutfen 1-",toplamTasAdedi,"arasi bir sayi giriniz.")
+                break
+            elif x <= 0:  #yerden en az 1 tas alinabilecegi icin(pas hakki olmadigi varsayılarak) saglanip saglanmadigini kontrol ettik
+                print("Lutfen pozitif bir sayi giriniz.")
+                break
+            else:
+                toplamTasAdedi -= x   #birinci oyuncunun aldigi taslari yerdeki taslardan cikardik
+            if toplamTasAdedi == 0: #yerdeki tasin bitip bitmedigini kontrol edip bittiyse 1. oyuncunun kazandigini belirttik
+                print("Birinci oyuncu kazandi, Tebrikler!" )
+                break
+            else:
+                y = int(input("2. Oyuncu : Kac tas almak istiyorsunuz? "))
+                if type(y) != int:    #ikinci oyuncunun kac tas alacagini sorduk
+                    print("Lutfen gecerli bir tam sayi giriniz")
+                    break
+                elif y > maxTas:    #alınmak istenen tas sayisinin tek seferde alınabilecek sayidan az olup olmadigini kontrol ettik
+                    print("Lutfen 1-",maxTas," arası gecerli bir sayi giriniz")
+                    break
+                elif toplamTasAdedi < y:    #alinmak istenen tas sayisinin yerdeki tas sayisindan az olup olmadigini kontrol ettik
+                    print("Lutfen 1-",toplamTasAdedi,"arasi bir sayi giriniz.")
+                    break
+                elif y <= 0:  #yerden en az 1 tas alinabilecegi icin(pas hakki olmadigi varsayılarak) saglanip saglanmadigini kontrol ettik
+                    print("Lutfen pozitif bir sayi giriniz.")
+                    break
+                else:
+                    toplamTasAdedi -= y   #ikinci oyuncunun aldigi taslari yerdeki taslardan cikardik
+                if toplamTasAdedi == 0:   #yerdeki tasin bitip bitmedigini kontrol edip bittiyse 2. oyuncunun kazandigini belirttik
+                    print("Ikinci oyuncu kazandi. Tebrikler!")
+                    break
+                else:
+                    continue
+        break
+tasCikarmaOyna(toplamTasAdedi,maxTas)
