@@ -1,0 +1,27 @@
+import random
+import math
+
+def sayiTahmin():
+    x = int(input("Gizli sayi 1’den kaca kadar olsun? : "))
+    t = random.randint(1 , x)
+    z = False
+
+    while not z:
+        y = int(input("Sayiyi tahmin ediniz: "))
+        if y <= 0:
+            print("Lutfen 0 dan buyuk bir sayi giriniz")
+        elif y > x:
+            print("Lutfen gecerli bir sayi giriniz")
+        else:
+            if y == t:
+                print("Tebrikler")
+                z = True
+            elif abs(t - y) <= 1:
+                print("Cok Yaklastiniz! Bir daha tahmin ediniz. ")
+            elif 1 < abs(t - y) <= 3:
+                print("Yaklastiniz! Bir daha tahmin ediniz. ")
+            elif 3 < abs(t - y) <= 5:
+                print("Uzak! Bir daha tahmin ediniz. ")
+            elif 5 < abs(t - y) <= x:
+                print("Cok uzak! Bir daha tahmin ediniz. ")
+sayiTahmin()
