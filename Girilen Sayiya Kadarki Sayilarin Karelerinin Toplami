@@ -1,0 +1,17 @@
+import math
+
+def karelerToplami():
+    x = int(input("Bir sayi giriniz : "))
+    sayilar = []
+    sonuc = 0
+    if x >= 0:
+        for i in range(x+1):
+            sayilar.append(i)
+            kare = pow(sayilar[i],2)
+            sonuc += kare
+        print("1'den" , x ,"'e kadarki tamsayıların karelerinin toplamı :  " , sonuc)
+    else:
+        print("Lutfen pozitif bir sayi giriniz.")
+        return karelerToplami()
+
+karelerToplami()
