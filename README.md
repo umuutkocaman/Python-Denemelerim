@@ -1,2 +1,2 @@
 # Python-Denemelerim
-Okulda gordugumuz Python dersindeki yaptigim uygulamalar
+Okulda gordugumuz Python dersinde yaptigim uygulamalar
