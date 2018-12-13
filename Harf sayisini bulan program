@@ -1,0 +1,30 @@
+def harfSay():
+    x = str(input("Harf sayisini ögrenmek istediginiz kelimeyi giriniz :  "))
+
+    x = x.replace("ç", "c")
+    x = x.replace("Ç", "C")
+    x = x.replace("ğ", "g")
+    x = x.replace("Ğ", "G")
+    x = x.replace("ı", "i")
+    x = x.replace("İ", "I")
+    x = x.replace("ö", "o")
+    x = x.replace("Ö", "O")
+    x = x.replace("ş", "s")
+    x = x.replace("Ş", "S")
+    x = x.replace("ü", "u")
+    x = x.replace("Ü", "U")
+
+    harfler = []
+    sayac = []
+
+    for i in x:
+        if not i in harfler:
+            harfler.append(i)
+            sayac.append(1)
+        else:
+            sayac[harfler.index(i)] = sayac[harfler.index(i)] + 1
+
+    for I in range(len(harfler)):
+        print(harfler[I], " = ", sayac[I])
+
+harfSay()
