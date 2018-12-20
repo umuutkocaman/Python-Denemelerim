@@ -1,3 +1,5 @@
+__author__ = "Umut Can Kocaman"
+
 import time
 
 print ("Icinde bulundugumuz yil : ",time.strftime('%Y'))
