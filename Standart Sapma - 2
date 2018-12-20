@@ -1,3 +1,5 @@
+__author__ = "Umut Can Kocaman"
+
 import math
 
 def standartSapma():
