@@ -1,3 +1,5 @@
+__author__ = "Umut Can Kocaman"
+
 def cevir():
     x = input("Cevirmek istediginiz kelimeyi giriniz")
 
