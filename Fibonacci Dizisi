@@ -1,3 +1,5 @@
+__author__ = "Umut Can Kocaman"
+
 m=int(input("Lutfen bir sayi giriniz : "))
 
 def fibonacci(n):
