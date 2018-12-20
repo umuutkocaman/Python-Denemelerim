@@ -1,3 +1,5 @@
+__author__ = "Umut Can Kocaman"
+
 import math
 
 def standartSapma (a,b,c,d,e): #Bize verilen odev 5 sayinin hesaplanmasini istendigi icin 5 parametre verdim. Istenirse daha az veya fazla verilebilir.
