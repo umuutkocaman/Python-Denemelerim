@@ -1,3 +1,5 @@
+__author__ = "Umut Can Kocaman"
+
 import turtle
 s = turtle.Turtle()
 s.left(90)
