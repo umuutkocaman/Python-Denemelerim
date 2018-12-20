@@ -1,3 +1,5 @@
+__author__ = "Umut Can Kocaman"
+
 def tasCikarmaOyna(toplamTasAdedi,maxTas):
     while True:
         while True:
