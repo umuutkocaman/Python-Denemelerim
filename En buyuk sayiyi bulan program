@@ -1,0 +1,18 @@
+__author__ = "Umut Can Kocaman"
+
+def kontrolEt():
+    y = int(input("Listenizin eleman sayisini giriniz : "))
+    liste = []
+
+    for i in range(y):
+        x = int(input("{}. sayinizi giriniz : ".format(i+1)))
+        liste.append(x)
+
+    t = liste[0]
+    for i in range(y):
+        if t < liste[i]:
+            t = liste[i]
+
+    print("Listenizdeki en buyuk sayi : {}".format(t))
+
+kontrolEt()
