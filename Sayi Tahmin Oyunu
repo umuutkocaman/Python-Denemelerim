@@ -6,9 +6,8 @@ import math
 def sayiTahmin():
     x = int(input("Gizli sayi 1’den kaca kadar olsun? : "))
     t = random.randint(1 , x)
-    z = False
 
-    while not z:
+    while True:
         y = int(input("Sayiyi tahmin ediniz: "))
         if y <= 0:
             print("Lutfen 0 dan buyuk bir sayi giriniz")
@@ -17,7 +16,7 @@ def sayiTahmin():
         else:
             if y == t:
                 print("Tebrikler")
-                z = True
+                break
             elif abs(t - y) <= 1:
                 print("Cok Yaklastiniz! Bir daha tahmin ediniz. ")
             elif 1 < abs(t - y) <= 3:
