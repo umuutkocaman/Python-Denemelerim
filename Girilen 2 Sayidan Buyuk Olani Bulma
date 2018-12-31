@@ -1,0 +1,9 @@
+import math
+
+def buyuk():
+	x = int(input("Lütfen ilk sayınızı giriniz : "))
+	y = int(input("Lütfen ilk sayınızı giriniz : "))
+	sonuc = int((x+y+(abs(x-y)))/2)                   #abs fonksiyonu mutlak değer alir.
+	print ("Girdiğiniz sayılardan büyük olan " , sonuc , "'dır/dir")
+  
+buyuk()
