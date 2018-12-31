@@ -1,9 +1,9 @@
-def faktoriyel():
+x = int(input("Faktoriyelini almak istediginiz sayiyi giriniz : "))
 
-    sonuc = 1
-    x = abs(int(input("Faktöriyelini almak istediğiniz sayıyı giriniz : ")))
-    for i in range(1, x+1):
-        sonuc = sonuc * i
-    print("Cevap: {}".format(sonuc))
+def faktoriyel(x):
+    if x <=0:
+        return 1
+    else:
+        return x * faktoriyel(x - 1)
 
-faktoriyel()
+print(faktoriyel(x))
