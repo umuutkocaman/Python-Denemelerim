@@ -1,0 +1,73 @@
+import turtle
+def hafta():
+    x = turtle.Turtle()
+    
+    #H HARFI
+    
+    x.rt(90)
+    x.fd(80)
+    x.bk(40)
+    x.lt(90)
+    x.fd(40)
+    x.lt(90)
+    x.fd(40)
+    x.bk(80)
+    x.up()
+    x.goto(50,-80)
+    x.down()
+    
+    #A HARFI
+    
+    x.rt(15)
+    x.fd(85)
+    x.rt(150)
+    x.fd(85)
+    x.up()
+    x.bk(40)
+    x.lt(75)
+    x.down()
+    x.bk(25)
+    x.lt(90)
+    x.up()
+    x.goto(100,-80)
+    x.down()
+    
+    #F HARFI
+    
+    x.fd(80)
+    x.rt(90)
+    x.fd(40)
+    x.bk(40)
+    x.lt(90)
+    x.bk(40)
+    x.rt(90)
+    x.fd(35)
+    x.up()
+    x.goto(180,-80)
+    x.lt(90)
+    x.down()
+    
+    #T HARFI
+    
+    x.fd(80)
+    x.lt(90)
+    x.fd(35)
+    x.bk(70)
+    x.up()
+    x.goto(220, -80)
+    x.down()
+    
+    #A HARFI
+    
+    x.rt(105)
+    x.fd(85)
+    x.rt(150)
+    x.fd(85)
+    x.bk(40)
+    x.lt(75)
+    x.bk(25)
+    x.up()
+    x.ht()
+
+hafta()
+turtle.mainloop()
