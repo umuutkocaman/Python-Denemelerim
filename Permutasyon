@@ -1,0 +1,17 @@
+def faktoriyel(x):
+    if x <=0:
+        return 1
+    else:
+        return x * faktoriyel(x - 1)
+
+def permutasyon():
+    n = int(input("Lutfen birinci sayiyi giriniz : "))
+    r = int(input("Lutfen ikinci sayiyi giriniz : "))
+    if n > 0 and r > 0:
+        pay = faktoriyel(n)
+        payda = faktoriyel(n-r)
+        print(pay / payda)
+    else:
+        print("Lutfen 0'dan buyuk bir sayi giriniz.")
+
+permutasyon()
