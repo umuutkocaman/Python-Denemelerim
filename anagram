@@ -1,0 +1,17 @@
+words = ['mert', 'umut', 'trem', 'tumu', 'mrte','araba', 'muut', 'hello', 'naber', 'phyton','bos', 'olleh', 'notyhp','rca', 'car', 'yilisab',
+         'mutlu', 'tumul', 'lutmu', 'yillar', 'larliy', 'rac', 'yilbasi', 'cra', 'arc', 'bitti', 'ittib', 'easy' , 'itbit', 'syea']
+
+anagramlar = {}
+for i in words:
+    ata = ''.join(sorted(i))
+    try:
+        anagramlar[ata].append(i)
+    except KeyError:
+        anagramlar[ata] = [i]
+
+anagram_listesi = [x for x in anagramlar.values() if len(x) > 1]
+
+sayac = 0
+for i in anagram_listesi:
+    print(anagram_listesi[sayac])
+    sayac += 1
