@@ -1,0 +1,68 @@
+"""
+Aralarında bosluk bırakılan birden fazla sayiyi istenilen islemlerden geciren basit hesap makinesi.
+Umut Can Kocaman - umutcan_koc@outlook.com - https://umutcankocaman.wordpress.com/
+"""
+
+def hesapMakinesi():
+    while True:
+        sonuc = 0  # sonuc degiskeni her seferinde sifirlanmasi icin while dongusu icine yazdik
+        sonuc2 = 1  # carpma isleminde 0 kullanırsak sonuç her zaman 0 olacagi icin degeri 1 olan ayri bir degisken atadik
+
+        print("Toplama için [toplama], cikarma icin [cikarma], bolme icin [bolme], carpma icin [carpma], cikmak icin [c]")
+        islem = input("Yapmak istediğiniz işlemi giriniz : ")
+
+        #toplama islemi kısmı
+        if islem == "toplama" or islem == "TOPLAMA":
+            sayilar = input("Toplanacak sayıları aralarında boşluk olacak şekilde giriniz: : ").split(" ")
+            try:
+                for i in sayilar:
+                    sonuc += float(i)
+                print(sonuc)
+            except ValueError:
+                print("lutfen sadece sayi giriniz")
+
+        #cikarma islemi kismi
+        elif islem == "cikarma" or islem == "çıkarma" or islem == "CİKARMA" or islem == "ÇIKARMA":
+            sayilar = input("Cikarilacak sayıları aralarında boşluk olacak şekilde giriniz: : ").split(" ")
+            sayilar = [float(i) for i in sayilar]   #her bir sayiyi float tipinde listeye ekledik
+            sonuc = sayilar[0] - sayilar[1]         #ilk basta sonuc = 0 atadigimiz icin islemi normal yapsaydik 0 - i - i+1 ... olacaktı o yuzden ilk iki sayiyi for disinda hesapladik
+            try:
+                for i in range(len(sayilar)-2):
+                    sonuc = sonuc - sayilar[i+2]
+                print(sonuc)
+            except ValueError:
+                print("lutfen sadece sayi giriniz")
+
+        # bolme islemi kismi
+        elif islem == "bolme" or islem == "bölme" or islem == "BOLME" or islem == "BÖLME":
+            sayilar = input("Bolunecek sayıları aralarında boşluk olacak şekilde giriniz: : ").split(" ")
+            sayilar = [float(i) for i in sayilar]   #tum sayilari float tipine cevirip listeye ekledik
+            try:
+                sonuc = sayilar[0] / sayilar[1]     #ilk iki sayinin sonucunu bularak ilk islemi manuel yaptik geri kalanlari for ile yaptik
+                del sayilar[:2]                     #manuel hesapladigimiz ilk iki sayiyi tekrar hesaplamamasi icin sildik
+                for i in range(len(sayilar)):
+                    sonuc = sonuc / sayilar[i]
+                print(sonuc)
+            except ValueError:
+                print("lutfen sadece sayi giriniz")
+            except ZeroDivisionError:
+                print("lutfen '0' sayisini bolmeye calismayiniz")
+
+        # carrma islemi kismi
+        elif islem == "carpma" or islem == "çarpma" or islem == "ÇARPMA" or islem == "CARPMA":
+            sayilar = input("Carpmak istediginiz sayıları aralarında boşluk olacak şekilde giriniz: : ").split(" ")
+            try:
+                for i in sayilar:
+                    sonuc2 *= float(i)
+                print(sonuc2)
+            except ValueError:
+                print("lutfen sadece sayi giriniz")
+
+        elif islem == "c" or islem == "C" or islem == "ç" or islem == "Ç" or islem == "cik" or islem == "çık":
+            print("Programdan cikiliyor...")
+            break
+
+        else:
+            print("Gecersiz bir islem adi giriniz.")
+
+hesapMakinesi()
