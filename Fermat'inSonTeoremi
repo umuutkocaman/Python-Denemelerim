@@ -21,6 +21,6 @@ def kontrolFermat():
             print("Fermat yanılmış!")
 
         else:
-            print("Teorem bir kez daha dogrulandi!", islem1, " != ", islem2)
+            print("Teorem bir kez daha dogrulandi!", islem1, " ≠ ", islem2)
 
 kontrolFermat()
