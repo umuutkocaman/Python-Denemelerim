@@ -1,0 +1,26 @@
+"""
+Fermat’ın Son Teoremine (Fermat’s Last Theorem) gore (a**n) + (b**n) = (c**n) denkleminde n > 2 icin bu esitligi saglayan herhangi bir 
+pozitif tam sayi yoktur. Bu degerleri kullanicidan alarak teoremin dogrulugunu kontrol eden program.
+---
+***Umut Can Kocaman - umutcan_kocaman@hotmail.com - https://umutcankocaman.wordpress.com/ ***
+"""
+
+def kontrolFermat():
+    a = int(input("a degerini giriniz : "))
+    b = int(input("b degerini giriniz : "))
+    c = int(input("c degerini giriniz : "))
+    n = int(input("n degerini giriniz(2'den buyuk olmali!) : "))
+
+    if n <= 2:    #formul geregi n degeri 2 den buyuk olmali
+        print("Lutfen 2 den buyuk bir sayi giriniz")
+    else:
+        islem1 = (a**n) + (b**n)
+        islem2 = c**n
+
+        if islem1 == islem2:
+            print("Fermat yanılmış!")
+
+        else:
+            print("Teorem bir kez daha dogrulandi!", islem1, " != ", islem2)
+
+kontrolFermat()
