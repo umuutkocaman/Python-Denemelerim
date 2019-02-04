@@ -5,7 +5,6 @@ import math
 def standartSapma():
     x = int(input("kac sayi gireceksiniz : "))
     y = []
-    z = []
     t = 0
     b = 0
     ort = 0
@@ -13,12 +12,11 @@ def standartSapma():
         sayi = int(input("{}. Sayiyi Giriniz : ".format(i+1)))   #i 0 dan başlaacağı için +1 yazdık
         y.append(sayi)
         t += sayi
-        ort = t/x                               #Aritmetik ortalamayi hesapladik
+        ort = t/x                           #Aritmetik ortalamayi hesapladik
 
     for i in range(x):
         a = (y[i] - ort)**2                 # Her bir degeri aritmetik ortalamadan cikarip kareisini aldık
-        z.append(a)                         # Karesini aldigimiz sayilari yeni bir listeye ekliyoruz
-        b += z[i]                           # Yeni listeye ekledigimiz sayilari topluyoruz
+        b += a                              # Yeni listeye ekledigimiz sayilari topluyoruz
 
     c = b/(x-1)                             #toplami girilen sayinin bir eskigine boluyoruz
     Sonuc = math.sqrt(c)                    #Ve son olarak boldugumuz sayinin karekookunu aliyoruz ve sonuc belli oluyor
