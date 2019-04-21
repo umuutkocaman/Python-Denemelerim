@@ -1,0 +1,63 @@
+import math as m
+
+x = int(input("Kac veriniz var? ")) #veri seti buyuklugu
+liste = [] #girilen sayılar
+toplam_kare = 0 #kareler toplamı
+toplam = 0 #veri setindeki sayilarin toplami
+q = 0 #mod'un frekansı
+
+for i in range(x):
+    y = int(input("{}. Sayinizi giriniz : " .format(i+1)))
+    liste.append(y)
+    toplam += y
+
+#aritmetik ortalama 
+ortalama = toplam / x
+print("Aritmetik Ortalama = {} " .format(ortalama))
+
+#varyans ve standart sapma
+for j in liste:
+    t = j - ortalama
+    tkare = m.pow(t,2)
+    toplam_kare += tkare
+    
+varyans = (toplam_kare / (x - 1))
+standartSapma = m.sqrt(varyans)
+print("Varyans = ", varyans)
+print("Standart Sapma = ", standartSapma)
+
+#ranj(aciklik)
+liste.sort()
+ranj = liste[x-1] - liste[0]
+print("Ranj(aciklik) = ", ranj)
+
+#mod(tepe deger)
+for j in liste:
+    z = liste.count(j)
+    if z > q:
+        q = z 
+        t = j #en çok tekrar eden sayı
+    
+print("MOD(Tepe Deger) = {}" .format(t))
+print("MOD(Tepe Deger)'in frekansı {}'dır/dir." .format(q))
+
+#medyan(ortanca)
+if x % 2 == 1: 
+    index = m.ceil(x / 2) # kaçıncı sayının medyan olduğunu bulduk
+    medyan = liste[index - 1] 
+    print("Medyanı {}" .format(medyan))
+    altCeyrek = liste[0:index-1]
+    ustCeyrek = liste[index:x]
+    print("alt ceyrek = ", altCeyrek)
+    print("ust ceyrek = ", ustCeyrek)
+
+else:   #eger girilen sayıların sayısı cift ise 2 medyan olur
+    index1 = int((x / 2) - 1)
+    index2 = int((x/ 2))
+    birinci = liste[index1]
+    ikinci = liste[index2]
+    print("Girdiginiz sayı dizisinin 2 Medyanı vardır. Bunlar {} ve {}'dır/dir." .format(birinci,ikinci))
+    altCeyrek = liste[0:index1]
+    ustCeyrek = liste[index2+1:x]
+    print("alt ceyrek = ", altCeyrek)
+    print("ust ceyrek = ", ustCeyrek)
