@@ -1,0 +1,56 @@
+print("\n Bu program Santigrat[C], Fahrenheit[F] ve Kelvin[K] sıcaklık birimleri arasında çevirme yapmaktadır. \n Çıkmak için 'q'")
+x = input("Elinizdeki Sıcaklık Birimi : ")
+deger = int(input("Elinizdeki Sıcaklık Biriminin Değeri : "))
+y = input("Çevirmek İstediğiniz Sıcaklık Birimi : \n")
+    
+if x == "Santigrat" or x == "santigrat" or x == "C" or x == "c":
+    if y == "Fahrenheit" or y == "fahrenheit" or y == "F" or y == "f":
+        F = (deger * 1.8 ) + 32
+        print("{} Santigrat = {} Fahrenhiet. \n".format(deger, F))
+            
+    elif y == "Kelvin" or y == "kelvin" or y == "K" or y == "k":
+        K = deger + 273.15
+        print("{} Santigrat = {} Kelvin. \n".format(deger, K))
+            
+    elif y == "Santigrat" or y == "santigrat" or y == "C" or y == "c":
+        print("Aynı iki sıcaklık birimini birbirine dönüştürmeye gerek yoktur.")
+        print("{} Santigrat = {} Santigrat. \n".format(deger, deger))    
+        
+    else:
+        print("Hatalı deger girdiniz.")
+            
+elif x == "Fahrenheit" or x == "fahrenheit" or x == "F" or x == "f":
+    if y == "Santigrat" or y == "santigrat" or y == "C" or y == "c":
+        C = (deger - 32) / 1.8
+        print("{} Fahrenheit = {} Santigrat. \n".format(deger, C))
+    
+    elif y == "Kelvin" or y == "kelvin" or y == "K" or y == "k":
+        K = (deger + 459.67) / 1.8
+        print("{} Fahrenheit = {} Kelvin. \n".format(deger, K))    
+        
+    elif y == "Fahrenheit" or y =="fahrenheit" or y == "F" or y == "f":
+        print("Aynı iki sıcaklık birimini birbirine dönüştürmeye gerek yoktur.")
+        print("{} Fahrenheit = {} Fahrenheit. \n".format(deger, deger))
+    
+    else:
+        print("Hatalı deger girdiniz.")
+    
+elif x == "Kelvin" or x == "kelvin" or x == "K" or x == "k":
+    if y == "Santigrat" or x == "santigrat" or y == "C" or y == "c":
+        C = deger - 273.15
+        print("{} Kelvin = {} Santigrat. \n".format(deger, C))
+    
+    elif y == "Fahrenheit" or y == "fahrenheit" or y == "F" or y == "f":
+        F = (deger * 1.8) - 459.67
+        print("{} Kelvin = {} Fahrenheit. \n".format(deger, F))
+        
+    elif y == "Kelvin" or y == "kelvin" or y == "K" or y == "k":
+        print("Aynı iki sıcaklık birimini birbirine dönüştürmeye gerek yoktur.")
+        print("{} Kelvin = {} Kelvin. ".format(deger, deger))
+        
+    else:
+        print("Hatalı deger girdiniz.")   
+    
+        
+else:
+    print("Hatalı bir deger girdiniz.")
