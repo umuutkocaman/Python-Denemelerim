@@ -1,4 +1,4 @@
-print("\n Bu program Santigrat[C], Fahrenheit[F] ve Kelvin[K] sıcaklık birimleri arasında çevirme yapmaktadır. \n Çıkmak için 'q'")
+print("Bu program Santigrat[C], Fahrenheit[F] ve Kelvin[K] sıcaklık birimleri arasında çevirme yapmaktadır.")
 x = input("Elinizdeki Sıcaklık Birimi : ")
 deger = int(input("Elinizdeki Sıcaklık Biriminin Değeri : "))
 y = input("Çevirmek İstediğiniz Sıcaklık Birimi : \n")
