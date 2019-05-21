@@ -1,0 +1,27 @@
+islem = input("Yapmak istediginiz islemi seciniz. Permutasyon için 1, Kombinasyon için 2. \n ")
+
+def fakt(x):
+    sonuc = 1
+    if x <= 0:
+        return 1
+    else:
+        for i in range(x):
+            sonuc *= i+1
+        return sonuc
+    
+if islem == "1":
+    n = int(input("Lutfen kümenizin eleman sayısını giriniz. "))
+    r = int(input("Lutfen kac elemanı sıralamak istiyorsunuz? "))
+    
+    perSonuc = fakt(n) / fakt(n-r)
+    print("P({},{}) = {}.".format(n,r,perSonuc))
+    
+elif islem == "2":
+    n = int(input("Lutfen kümenizin eleman sayısını giriniz. "))
+    r = int(input("Kac eleman secmek istiyorsunuz? "))
+    
+    kombSonuc = fakt(n) / (fakt(n-r) * fakt(r))
+    print("C({},{}) = {}.".format(n,r,kombSonuc))
+
+else:
+    print("Yanlış bir değer girdiniz.")
