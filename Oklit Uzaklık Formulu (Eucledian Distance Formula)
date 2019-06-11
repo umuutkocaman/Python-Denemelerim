@@ -1,12 +1,9 @@
-def oklid():
-	
-	p1 = int(input("Birinci noktanızın 1. değerini giriniz : "))
-	p2 = int(input("Birinci noktanızın 2. değerini giriniz : "))
-  q1 = int(input("İkinci noktanızın 1. değerini giriniz : "))
-	q2 = int(input("İkinci noktanızın 2. değerini giriniz : "))
-	
-	sonuc = ((((p1 - q1)**(2) + (p2 - q2)**(2))**(0.5)))
-	
-	print ("Girdiğiniz iki nokta arasındaki uzaklık " , sonuc )
+import math as m
 
-oklid()
+x1 = int(input("Birinci noktanızın 1. değerini giriniz : "))
+x2 = int(input("Birinci noktanızın 2. değerini giriniz : "))
+y1 = int(input("İkinci noktanızın 1. değerini giriniz : "))
+y2 = int(input("İkinci noktanızın 2. değerini giriniz : "))
+
+sonuc = m.sqrt(pow((x1 - y1),2) + pow((x2 - y2),2))
+print ("Girdiğiniz iki nokta arasındaki uzaklık " , sonuc )
