@@ -1,0 +1,13 @@
+islem = input("Elinizdeki uzunluk birimi nedir?. ['km'], ['mil'] ")
+deger = float(input("Uzunluk degerinizi giriniz. "))
+
+if islem == 'km' or islem == 'Km' or islem == 'KM' or islem = 'kilometre':
+    sonuc = round(deger * 0.62137, 2)
+    print("{} km = {} mil".format(deger, sonuc))
+
+elif islem == 'mil' or islem == 'Mil' or islem == 'MIL' or islem = 'miles':
+    sonuc = round(deger / 0.62137, 2)
+    print("{} mil = {} km".format(deger, sonuc))
+    
+else:
+    print("Yanlis bir deger girdiniz")
