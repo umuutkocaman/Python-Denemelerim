@@ -1,0 +1,53 @@
+__author__ = "Umut Can Kocaman"
+"""  https://umutcankocaman.wordpress.com/   """
+
+import random
+
+liste = ["taş", "kağıt", "makas"]
+
+while True:
+    PcSecim = random.choice(liste)
+    kullanıcıSecim = input("Taş, Kağıt, Makas hangisini seçtiniz?")
+    
+    if kullanıcıSecim == "q" or kullanıcıSecim == "Q":
+        print("Programdan Çıkış yapılıyor. Tekrar görüşmek üzere!")
+        break;
+    
+    if PcSecim == liste[0]:
+        if kullanıcıSecim == "Taş" or kullanıcıSecim == "taş":
+            print("Berabere! Bilgisayar da {} seçmişti.".format(PcSecim))
+            
+        elif kullanıcıSecim == "Kağıt" or kullanıcıSecim == "kağıt":
+            print("Kazandınız, Tebrikler! Bilgisayar {} seçmişti.".format(PcSecim))
+            
+        elif kullanıcıSecim == "Makas" or kullanıcıSecim == "makas":
+            print("Kaybettiniz. Bilgisayar {} seçmişti.".format(PcSecim))
+            
+        else:
+            print("Hatalı giriş yaptınız, Lütfen sadece Taş, Kağıt, Makas veya 'q' değerlerini giriniz.")
+
+    elif PcSecim == liste[1]:
+        if kullanıcıSecim == "Taş" or kullanıcıSecim == "taş":
+            print("Kaybettiniz. Bilgisayar {} seçmişti.".format(PcSecim))
+            
+        elif kullanıcıSecim == "Kağıt" or kullanıcıSecim == "kağıt":
+            print("Berabere! Bilgisayar da {} seçmişti.".format(PcSecim))
+            
+        elif kullanıcıSecim == "Makas" or kullanıcıSecim == "makas":
+            print("Kazandınız, Tebrikler! Bilgisayar {} seçmişti.".format(PcSecim)) 
+            
+        else:
+            print("Hatalı giriş yaptınız, Lütfen sadece Taş, Kağıt, Makas veya 'q' değerlerini giriniz.")
+            
+    elif PcSecim == liste[2]:
+        if kullanıcıSecim == "Taş" or kullanıcıSecim == "taş":
+            print("Kazandınız, Tebrikler! Bilgisayar {} seçmişti.".format(PcSecim))
+            
+        elif kullanıcıSecim == "Kağıt" or kullanıcıSecim == "kağıt":
+            print("Kaybettiniz. Bilgisayar {} seçmişti.".format(PcSecim))
+
+        elif kullanıcıSecim == "Makas" or kullanıcıSecim == "makas":
+            print("Berabere! Bilgisayar da {} seçmişti.".format(PcSecim))
+            
+        else:
+            print("Hatalı giriş yaptınız, Lütfen sadece Taş, Kağıt, Makas veya 'q' değerlerini giriniz.")
