@@ -1,7 +1,0 @@
-def karekok():
-	a = int(input("Karekökünü almak istediğiniz sayıyı giriniz : "))
-	b = (a**(0.5))      #0.5 yerine 1/2 de yazilabilir.
-	print ( a , "sayısının karekökü " , b , "'dır/dir.")
-	return karekok()
-
-karekok()
