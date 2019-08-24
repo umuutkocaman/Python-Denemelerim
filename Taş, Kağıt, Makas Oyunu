@@ -7,7 +7,7 @@ liste = ["taş", "kağıt", "makas"]
 
 while True:
     PcSecim = random.choice(liste)
-    kullanıcıSecim = input("Taş, Kağıt, Makas hangisini seçtiniz?")
+    kullanıcıSecim = input("Taş, Kağıt, Makas hangisini seçtiniz? Çıkmak için 'q' giriniz!")
     
     if kullanıcıSecim == "q" or kullanıcıSecim == "Q":
         print("Programdan Çıkış yapılıyor. Tekrar görüşmek üzere!")
