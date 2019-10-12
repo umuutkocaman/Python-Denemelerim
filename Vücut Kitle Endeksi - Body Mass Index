@@ -1,0 +1,25 @@
+boy = int(input("Lütfen boy(cm) bilginizi giriniz"))
+kilo = int(input("Lütfen kilo bilginizi giriniz"))
+
+vke = round((kilo / pow((boy),2)) * 10000, 1)
+
+if vke < 18.4:
+    print("Vücut Kitle Endeksiniz {} -  Zayıf ".format(vke))
+    
+elif vke >= 18.5 and vke <= 24.9:
+    print("Vücut Kitle Endeksiniz {} -  Normal ".format(vke))
+    
+elif vke >= 25.0 and vke <= 29.9:
+    print("Vücut Kitle Endeksiniz {} -  Fazla Kilolu ".format(vke))
+        
+elif vke >= 30.0 and vke <= 34.9:
+    print("Vücut Kitle Endeksiniz {} -  Şişman (Obez) - I. Sınıf  ".format(vke))
+        
+elif vke >= 35.0 and vke <= 44.9:
+    print("Vücut Kitle Endeksiniz {} -  Şişman (Obez) - II. Sınıf  ".format(vke))
+        
+elif vke >= 45.0:
+    print("Vücut Kitle Endeksiniz {} -  Şişman (Obez) - III. Sınıf  ".format(vke))
+    
+else:
+    print("Hatalı giriş yaptınız. Lütfen bilgilerinizi kontrol ediniz")
