@@ -7,3 +7,5 @@ Arayüz tasarımı PyQt5 Designer ile yapılmıştır. Bu basit programı günl�
 .exe dosyasını indirip kullanabilirsiniz.
 
 Kodlar üzerinde bir değişiklik yaparsanız ve exe'ye çevirmek isterseniz [buradan](https://www.geeksforgeeks.org/convert-python-script-to-exe-file/) bilgi alabilirsiniz.
+
+![alt text](ekran.PNG)
